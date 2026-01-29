@@ -1,0 +1,22 @@
+{
+  "activities": [
+    {
+      "id": 1,
+      "name": "Surf",
+      "description": "Clases de surf para todos los niveles",
+      "date": "2026-02-01",
+      "start": "12:00",
+      "end": "13:30",
+      "available": 20
+    },
+    {
+      "id": 2,
+      "name": "Windsurf",
+      "description": "Actividad tranquila en el mar",
+      "date": "2026-02-01",
+      "start": "12:00",
+      "end": "13:30",
+      "available": 20
+    }
+  ]
+}
