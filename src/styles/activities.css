@@ -37,7 +37,6 @@ body {
   transition: 0.4s;
 }
 
-/* Cuando el radio está marcado, mostramos su testimonio */
 #t1:checked ~ .testimonio-container .t1 {
   opacity: 1;
   pointer-events: all;

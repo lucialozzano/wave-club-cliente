@@ -1,6 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Activities from "./pages/Activities";
+import ActivityPage from "./pages/ActivityPage";
+
+
 
 function App() {
   return (
@@ -8,8 +11,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/activities" element={<Activities />} />
+        <Route path="/activities/:activityName" element={<ActivityPage />} />
+
       </Routes>
-    </BrowserRouter> )
+    </BrowserRouter>)
 }
 
 export default App;

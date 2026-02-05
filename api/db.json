@@ -4,19 +4,154 @@
       "id": 1,
       "name": "Surf",
       "description": "Clases de surf para todos los niveles",
-      "date": "2026-02-01",
+      "date": "2026-02-04",
       "start": "12:00",
       "end": "13:30",
       "available": 20
     },
     {
       "id": 2,
+      "name": "Surf",
+      "description": "Surf avanzado para mejorar técnica",
+      "date": "2026-02-04",
+      "start": "14:00",
+      "end": "15:30",
+      "available": 15
+    },
+    {
+      "id": 3,
+      "name": "Surf",
+      "description": "Clase de surf para principiantes",
+      "date": "2026-02-05",
+      "start": "10:00",
+      "end": "11:30",
+      "available": 18
+    },
+    {
+      "id": 4,
+      "name": "Surf",
+      "description": "Surf intermedio con instructor",
+      "date": "2026-02-06",
+      "start": "12:00",
+      "end": "13:30",
+      "available": 16
+    },
+    {
+      "id": 5,
+      "name": "Surf",
+      "description": "Surf avanzado en grupo",
+      "date": "2026-02-07",
+      "start": "14:00",
+      "end": "15:30",
+      "available": 12
+    },
+    {
+      "id": 6,
       "name": "Windsurf",
-      "description": "Actividad tranquila en el mar",
-      "date": "2026-02-01",
+      "description": "Clase de windsurf nivel básico",
+      "date": "2026-02-04",
       "start": "12:00",
       "end": "13:30",
       "available": 20
+    },
+    {
+      "id": 7,
+      "name": "Windsurf",
+      "description": "Windsurf intermedio",
+      "date": "2026-02-05",
+      "start": "14:00",
+      "end": "15:30",
+      "available": 12
+    },
+    {
+      "id": 8,
+      "name": "Windsurf",
+      "description": "Clase avanzada de windsurf",
+      "date": "2026-02-06",
+      "start": "10:00",
+      "end": "11:30",
+      "available": 10
+    },
+    {
+      "id": 9,
+      "name": "Windsurf",
+      "description": "Windsurf avanzado en grupo",
+      "date": "2026-02-07",
+      "start": "16:00",
+      "end": "17:30",
+      "available": 8
+    },
+    {
+      "id": 10,
+      "name": "Piragüismo",
+      "description": "Kayak individual para principiantes",
+      "date": "2026-02-04",
+      "start": "10:00",
+      "end": "11:30",
+      "available": 10
+    },
+    {
+      "id": 11,
+      "name": "Piragüismo",
+      "description": "Ruta de piragüismo tranquila",
+      "date": "2026-02-05",
+      "start": "12:00",
+      "end": "13:30",
+      "available": 8
+    },
+    {
+      "id": 12,
+      "name": "Piragüismo",
+      "description": "Kayak avanzado en grupo",
+      "date": "2026-02-06",
+      "start": "14:00",
+      "end": "15:30",
+      "available": 6
+    },
+    {
+      "id": 13,
+      "name": "Piragüismo",
+      "description": "Kayak en pareja",
+      "date": "2026-02-07",
+      "start": "16:00",
+      "end": "17:30",
+      "available": 12
+    },
+    {
+      "id": 14,
+      "name": "Natación en aguas abiertas",
+      "description": "Natación para todos los niveles",
+      "date": "2026-02-04",
+      "start": "08:00",
+      "end": "09:30",
+      "available": 15
+    },
+    {
+      "id": 15,
+      "name": "Natación en aguas abiertas",
+      "description": "Entrenamiento avanzado",
+      "date": "2026-02-05",
+      "start": "10:00",
+      "end": "11:30",
+      "available": 12
+    },
+    {
+      "id": 16,
+      "name": "Natación en aguas abiertas",
+      "description": "Clases para mejorar resistencia",
+      "date": "2026-02-06",
+      "start": "12:00",
+      "end": "13:30",
+      "available": 10
+    },
+    {
+      "id": 17,
+      "name": "Natación en aguas abiertas",
+      "description": "Natación avanzada en grupo",
+      "date": "2026-02-07",
+      "start": "14:00",
+      "end": "15:30",
+      "available": 8
     }
   ]
 }

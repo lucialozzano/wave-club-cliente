@@ -1,9 +1,13 @@
-//`pnerlo con tabla activities
+import { Link } from "react-router-dom";
+
 const Grid = () => {
   return (
     <div className="flex flex-wrap justify-center">
 
-      <div className="w-full sm:w-1/2 lg:w-1/4 p-2 relative overflow-hidden">
+      <Link
+        to="/activities/natacion"
+        className="w-full sm:w-1/2 lg:w-1/4 p-2 relative overflow-hidden"
+      >
         <img
           src="/src/assets/images/actividades-natacion.jpg"
           alt="Natación"
@@ -12,9 +16,12 @@ const Grid = () => {
         <h2 className="absolute bottom-4 left-4 text-black tracking-widest text-xl">
           NATACIÓN
         </h2>
-      </div>
+      </Link>
 
-      <div className="w-full sm:w-1/2 lg:w-1/4 p-2 relative overflow-hidden">
+      <Link
+        to="/activities/piraguismo"
+        className="w-full sm:w-1/2 lg:w-1/4 p-2 relative overflow-hidden"
+      >
         <img
           src="/src/assets/images/actividades-piraguismo.jpg"
           alt="Piragüismo"
@@ -23,9 +30,12 @@ const Grid = () => {
         <h2 className="absolute bottom-4 left-4 text-white tracking-widest text-xl">
           PIRAGÜISMO
         </h2>
-      </div>
+      </Link>
 
-      <div className="w-full sm:w-1/2 lg:w-1/4 p-2 relative overflow-hidden">
+      <Link
+        to="/activities/surf"
+        className="w-full sm:w-1/2 lg:w-1/4 p-2 relative overflow-hidden"
+      >
         <img
           src="/src/assets/images/actividades-surf.jpg"
           alt="Surf"
@@ -34,9 +44,12 @@ const Grid = () => {
         <h2 className="absolute bottom-4 left-4 text-white tracking-widest text-xl">
           SURF
         </h2>
-      </div>
+      </Link>
 
-      <div className="w-full sm:w-1/2 lg:w-1/4 p-2 relative overflow-hidden">
+      <Link
+        to="/activities/windsurf"
+        className="w-full sm:w-1/2 lg:w-1/4 p-2 relative overflow-hidden"
+      >
         <img
           src="/src/assets/images/actividades-windsurf.jpg"
           alt="Windsurf"
@@ -45,7 +58,7 @@ const Grid = () => {
         <h2 className="absolute bottom-4 left-4 text-black tracking-widest text-xl">
           WINDSURF
         </h2>
-      </div>
+      </Link>
 
     </div>
   );

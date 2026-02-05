@@ -1,0 +1,49 @@
+.activity-card {
+  background: linear-gradient(135deg, #e0f7fa, #ffffff);
+  border: 1px solid #00d4b4;
+  border-radius: 1rem;
+  box-shadow: 0 10px 20px rgba(0, 188, 212, 0.2);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.activity-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 25px rgba(0, 188, 212, 0.3);
+}
+
+.activity-level {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-weight: bold;
+  font-size: 0.75rem;
+  color: white;
+  text-transform: uppercase;
+  z-index: 10;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+
+.level-principiante { background-color: #00d4bb; }   /* aqua */
+.level-intermedio  { background-color: #00a796; }   /* azul aqua más oscuro */
+.level-avanzado    { background-color: #00645c; }   /* azul aqua fuerte */
+
+.btn-reservar {
+  background-color: #00d4c6;
+  color: white;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 0.75rem;
+  width: 100%;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 10px rgba(0, 188, 212, 0.3);
+}
+
+.btn-reservar:hover {
+  background-color: #00a799;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(0, 208, 212, 0.5);
+}

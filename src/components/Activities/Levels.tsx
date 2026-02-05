@@ -2,8 +2,8 @@
 const Levels = () => {
   return (
     <>
-      <div className="mt-20 pt-5 text-center mx-5">
-        <h2 className="text-2xl font-semibold">
+      <div className="mt-10 pt-5 text-center mx-5">
+        <h2 className="text-3xl font-semibold">
           CLASES PARA TODOS LOS NIVELES
         </h2>
       </div>
