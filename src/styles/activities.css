@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+/* PROFESORES */
+.profesor-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.hover-info {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 204, 187, 0.72);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-100%);
+  transition: 0.5s;
+}
+
+.profesor-card:hover .hover-info {
+  transform: translateY(0);
+}
+
+
+/* TESTIMONIOS */
+
+.testimonio {
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.4s;
+}
+
+/* Cuando el radio está marcado, mostramos su testimonio */
+#t1:checked ~ .testimonio-container .t1 {
+  opacity: 1;
+  pointer-events: all;
+}
+
+#t2:checked ~ .testimonio-container .t2 {
+  opacity: 1;
+  pointer-events: all;
+}
+
+#t3:checked ~ .testimonio-container .t3 {
+  opacity: 1;
+  pointer-events: all;
+}
