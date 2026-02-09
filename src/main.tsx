@@ -4,9 +4,12 @@ import './styles/index.css'
 import './styles/activities.css'
 import './styles/activityGrid.css'
 import App from './App.tsx'
+import { UserProvider } from './context/UserContext'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <App />
+    <UserProvider> 
+      <App />
+    </UserProvider>
   </StrictMode>,
 )

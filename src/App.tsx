@@ -2,7 +2,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Activities from "./pages/Activities";
 import ActivityPage from "./pages/ActivityPage";
-
+import Login from "./pages/Login";
+import Register from "./pages/Register";
 
 
 function App() {
@@ -12,7 +13,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/activities" element={<Activities />} />
         <Route path="/activities/:activityName" element={<ActivityPage />} />
-
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
     </BrowserRouter>)
 }
