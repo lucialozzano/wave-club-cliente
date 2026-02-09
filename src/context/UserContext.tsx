@@ -1,10 +1,11 @@
 import { createContext, useContext, useState } from "react";
 import type { ReactNode } from "react";
+import type { User } from "../types/User";
 
 interface UserContextType {
   userId: number | null;
   userName: string | null; 
-  login: (id: number, name: string) => void;
+  login: (user: User) => void; 
   logout: () => void;
   isLoggedIn: boolean;
 }
@@ -27,11 +28,11 @@ export const UserProvider = ({ children }: { children: ReactNode }) => {
     return localStorage.getItem("userName");
   });
 
-  const login = (id: number, name: string) => {
-    localStorage.setItem("userId", id.toString());
-    localStorage.setItem("userName", name); 
-    setUserId(id);
-    setUserName(name);
+  const login = (user: User) => {
+    localStorage.setItem("userId", user.id.toString());
+    localStorage.setItem("userName", user.name); 
+    setUserId(user.id);
+    setUserName(user.name);
   };
 
   const logout = () => {

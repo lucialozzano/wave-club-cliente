@@ -4,18 +4,36 @@ import { Link } from "react-router-dom";
 const Header = () => {
   const { userName, isLoggedIn, logout } = useUser();
 
+  const navItems = ["Eventos", "Contáctanos", "Merchandising", "Blog"];
+
   return (
     <header className="bg-white shadow-sm border-b border-gray-100 sticky top-0 z-50">
       <nav className="container mx-auto px-6 py-4 flex justify-between items-center">
         
         <ul className="hidden md:flex items-center gap-8">
-          {["Eventos", "Contáctanos", "Merchandising", "Blog"].map((item) => (
+          <li>
+            <Link to="/activities" className="text-gray-600 font-medium hover:text-cyan-500 transition-colors">
+              Actividades
+            </Link>
+          </li>
+
+
+          {navItems.map((item) => (
             <li key={item}>
               <a href={`#${item.toLowerCase()}`} className="text-gray-600 font-medium hover:text-cyan-500 transition-colors">
                 {item}
               </a>
             </li>
           ))}
+
+          {isLoggedIn && (
+            <li>
+              <Link to="/my-reservations" className="text-gray-600 font-medium hover:text-cyan-500 transition-colors">
+                Mis Reservas
+              </Link>
+            </li>
+          )}
+
         </ul>
 
         <div className="flex items-center gap-4">

@@ -4,7 +4,7 @@ import Activities from "./pages/Activities";
 import ActivityPage from "./pages/ActivityPage";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-
+import MyReservations from "./pages/MyReservations";
 
 function App() {
   return (
@@ -15,6 +15,7 @@ function App() {
         <Route path="/activities/:activityName" element={<ActivityPage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/my-reservations" element={<MyReservations />} />
       </Routes>
     </BrowserRouter>)
 }

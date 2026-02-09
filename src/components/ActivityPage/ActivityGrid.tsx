@@ -1,20 +1,9 @@
 import { useParams, useNavigate, useLocation } from "react-router-dom";
 import { useEffect, useState, useRef } from "react";
 import { useUser } from "../../context/UserContext";
+import type { Activity } from "../../types/Activity"; 
+import type { Reservation } from "../../types/Reservation";
 
-interface Clase {
-  id: number;
-  name: string;
-  description: string;
-  date: string;
-  start: string;
-  end: string;
-  available: number;
-}
-
-interface Reserva {
-  id: number | string;
-}
 
 const slugMap: Record<string, string> = {
   surf: "Surf",
@@ -25,7 +14,7 @@ const slugMap: Record<string, string> = {
 
 const ActivityGrid = () => {
   const { activityName } = useParams<{ activityName: string }>();
-  const [classes, setClasses] = useState<Clase[]>([]);
+  const [classes, setClasses] = useState<Activity[]>([]);
   const { isLoggedIn, userId } = useUser();
   const navigate = useNavigate();
   const location = useLocation();
@@ -33,7 +22,7 @@ const ActivityGrid = () => {
 
   const displayName = activityName ? slugMap[activityName] || activityName : "";
 
-  async function handleReserve(cls: Clase) {
+  async function handleReserve(cls: Activity) {
     if (cls.available <= 0) return;
 
     const ok = window.confirm(`¿Reservar ${cls.name} el ${cls.date} a las ${cls.start}?`);
@@ -41,7 +30,7 @@ const ActivityGrid = () => {
 
     try {
       const resResv = await fetch("http://localhost:3001/reservations");
-      const allResv: Reserva[] = await resResv.json();
+      const allResv: Reservation[] = await resResv.json();
 
       const nextResvIdNumeric = allResv.length > 0
         ? Math.max(...allResv.map((r) => {
@@ -86,7 +75,7 @@ const ActivityGrid = () => {
       .then((res) => res.json())
       .then((data) => {
         const now = new Date();
-        const futureActivities = data.filter((c: Clase) => {
+        const futureActivities = data.filter((c: Activity) => {
           const activityDateTime = new Date(`${c.date}T${c.start}`);
           return activityDateTime >= now;
         });
@@ -102,7 +91,7 @@ const ActivityGrid = () => {
   }, [activityName]);
 
   useEffect(() => {
-    const state = location.state as { reserveThis?: Clase } | undefined;
+    const state = location.state as { reserveThis?: Activity } | undefined;
     if (state?.reserveThis && isLoggedIn && !hasReserved.current) {
       hasReserved.current = true;
       navigate(location.pathname, { replace: true, state: {} });
@@ -110,7 +99,7 @@ const ActivityGrid = () => {
     }
   }, [isLoggedIn, location.state, location.pathname, navigate]);
 
-  const handleClickReserve = (cls: Clase) => {
+  const handleClickReserve = (cls: Activity) => {
     if (!isLoggedIn) {
       navigate("/login", { state: { reserveThis: cls } });
       return;

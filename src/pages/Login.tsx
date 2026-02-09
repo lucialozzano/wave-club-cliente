@@ -3,6 +3,7 @@ import { useUser } from "../context/UserContext";
 import { useNavigate, useLocation, Link } from "react-router-dom";
 import users from "../../api/db.json";
 import type { Activity } from "../types/Activity";
+import type { User } from "../types/User";
 
 const Login = () => {
   const { login } = useUser();
@@ -13,7 +14,7 @@ const Login = () => {
   const [password, setPassword] = useState("");
 
   const handleLogin = () => {
-    const user = users.users.find(
+    const user = (users.users as unknown as User[]).find(
       (u) => u.email === email && u.password === password
     );
 
@@ -22,7 +23,7 @@ const Login = () => {
       return;
     }
 
-    login(user.id, user.name); 
+    login(user); 
 
     const state = location.state as { reserveThis?: Activity } | undefined;
 

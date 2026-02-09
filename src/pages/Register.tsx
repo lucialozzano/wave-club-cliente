@@ -1,12 +1,8 @@
 import { useState } from "react";
 import { useUser } from "../context/UserContext";
 import { useNavigate } from "react-router-dom";
+import type { User } from "../types/User";
 
-interface User {
-  id: number | string;
-  name: string;
-  email: string;
-}
 
 const Register = () => {
   const { login } = useUser();
@@ -49,8 +45,10 @@ const Register = () => {
       });
 
       if (response.ok) {
-        const newUser = await response.json();
-        login(Number(newUser.id), newUser.name);
+        const newUser: User = await response.json();
+
+        login(newUser);
+
         alert(`¡Bienvenid@ ${newUser.name}!`);
         navigate("/");
       } else {
