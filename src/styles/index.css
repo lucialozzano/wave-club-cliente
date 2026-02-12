@@ -9,7 +9,6 @@ body {
   font-family: 'Josefin Sans', sans-serif;
 }
 
-/* Header */
 .wave-container {
   height: 550px;
   position: relative;
@@ -29,12 +28,12 @@ body {
     height: 450px;
     background-size: cover;
   }
+
   .wave-container::before {
     height: 30px;
   }
 }
 
-/* Botón reservar */
 .button-alquilar {
   letter-spacing: 2px;
   font-size: large;
@@ -43,7 +42,7 @@ body {
   background-color: white;
   border-radius: 9999px;
   font-weight: 600;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
 }
 
@@ -51,10 +50,9 @@ body {
   background-color: #0ee5e6;
   color: rgb(255, 255, 255);
   transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(14,229,230,0.4);
+  box-shadow: 0 10px 20px rgba(14, 229, 230, 0.4);
 }
 
-/* grid section */
 .group:hover img {
   transform: scale(1.05);
 }
@@ -63,7 +61,6 @@ section {
   height: 500px;
 }
 
-/* Catch the Wave */
 .parallax {
   height: 500px;
   margin-top: 205px;
@@ -90,7 +87,6 @@ section {
   margin-top: -20px;
 }
 
-/* Footer */
 .footer-link {
   display: inline-block;
   padding: 6px 12px;
@@ -107,6 +103,7 @@ section {
   box-shadow: 0px 5px 15px rgba(14, 229, 230, 0.4);
 }
 
-table th, table td {
+table th,
+table td {
   font-size: 14px;
 }

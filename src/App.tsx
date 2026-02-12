@@ -5,6 +5,7 @@ import ActivityPage from "./pages/ActivityPage";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import MyReservations from "./pages/MyReservations";
+import AdminPanel from "./pages/AdminPanel";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/my-reservations" element={<MyReservations />} />
+        <Route path="/admin-panel" element={<AdminPanel />} />
       </Routes>
     </BrowserRouter>)
 }

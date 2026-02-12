@@ -1,7 +1,7 @@
 export interface Reservation {
-  id: string | number;
-  userId: number;
-  activityId: number;
+  id: number | string;
+  userId: number | string;
+  activityId: number | string;
   date: string;
   start: string;
 }

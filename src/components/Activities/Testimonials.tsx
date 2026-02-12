@@ -1,4 +1,3 @@
-//puedo ponerlo con tabla testimonios
 const Testimonials = () => {
   return (
     <div className="flex flex-wrap bg-black py-10 px-5 mt-40 h-60">
@@ -10,7 +9,6 @@ const Testimonials = () => {
       </div>
 
       <div className="w-full md:w-1/2 relative flex justify-center items-center">
-
         <input type="radio" name="testimonial" id="t1" className="hidden" defaultChecked />
         <input type="radio" name="testimonial" id="t2" className="hidden" />
         <input type="radio" name="testimonial" id="t3" className="hidden" />

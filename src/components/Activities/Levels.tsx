@@ -1,4 +1,3 @@
-//puedo ponerlo con tabla niveles
 const Levels = () => {
   return (
     <>

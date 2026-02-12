@@ -2,15 +2,31 @@
   "users": [
     {
       "id": "1",
-      "name": "Juan",
-      "email": "juan",
-      "password": "1234"
+      "name": "Admi",
+      "email": "admin",
+      "password": "1234",
+      "role": "admin"
     },
     {
-      "id": "2",
-      "name": "sadads",
-      "email": "asda",
-      "password": "asda"
+      "name": "Jua",
+      "email": "juan",
+      "password": "1234",
+      "role": "admin",
+      "id": "2"
+    },
+    {
+      "name": "lucia",
+      "email": "lucia",
+      "password": "1234",
+      "role": "monitor",
+      "id": "4"
+    },
+    {
+      "id": "5",
+      "name": "sdfsdfs",
+      "email": "sdfsdf",
+      "password": "sdfsd",
+      "role": "user"
     }
   ],
   "activities": [
@@ -20,8 +36,8 @@
       "description": "Clases de surf para todos los niveles",
       "date": "2026-02-14",
       "start": "12:00",
-      "end": "13:30",
-      "available": 19
+      "end": "14:00",
+      "available": 17
     },
     {
       "id": "2",
@@ -66,7 +82,7 @@
       "date": "2026-02-14",
       "start": "12:00",
       "end": "13:30",
-      "available": 20
+      "available": 19
     },
     {
       "id": "7",
@@ -111,7 +127,7 @@
       "date": "2026-02-15",
       "start": "12:00",
       "end": "13:30",
-      "available": 7
+      "available": 5
     },
     {
       "id": "12",
@@ -129,7 +145,7 @@
       "date": "2026-02-17",
       "start": "16:00",
       "end": "17:30",
-      "available": 12
+      "available": 11
     },
     {
       "id": "14",
@@ -147,7 +163,7 @@
       "date": "2026-02-15",
       "start": "10:00",
       "end": "11:30",
-      "available": 11
+      "available": 4
     },
     {
       "id": "16",
@@ -165,30 +181,32 @@
       "date": "2026-02-17",
       "start": "14:00",
       "end": "15:30",
-      "available": 8
+      "available": 4
+    },
+    {
+      "id": 0,
+      "name": "Surf",
+      "description": "asdasd",
+      "date": "asd",
+      "start": "asd",
+      "end": "asd",
+      "available": 20
     }
   ],
   "reservations": [
     {
-      "id": "1",
-      "userId": 2,
-      "activityId": "15",
+      "id": "841f",
+      "userId": 1,
+      "activityId": 15,
       "date": "2026-02-15",
       "start": "10:00"
     },
     {
-      "id": "2",
-      "userId": "1",
-      "activityId": "1",
-      "date": "2026-02-14",
-      "start": "12:00"
-    },
-    {
-      "id": "3",
-      "userId": "1",
-      "activityId": "11",
+      "id": "b9b7",
+      "userId": 2,
+      "activityId": 15,
       "date": "2026-02-15",
-      "start": "12:00"
+      "start": "10:00"
     }
   ]
 }

@@ -1,4 +1,3 @@
-//puedo ponerlo con tabla profesores
 const Teachers = () => {
   return (
     <div className="flex mt-20 flex-wrap justify-center gap-6">
@@ -38,7 +37,6 @@ const Teachers = () => {
           <h6 className="mb-2">EXCURSION'S</h6>
         </div>
       </div>
-
     </div>
   );
 };

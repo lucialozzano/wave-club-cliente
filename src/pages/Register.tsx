@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useUser } from "../context/UserContext";
 import { useNavigate } from "react-router-dom";
 import type { User } from "../types/User";
-
+import { UserService } from "../api/userService";
 
 const Register = () => {
   const { login } = useUser();
@@ -19,52 +19,38 @@ const Register = () => {
     }
 
     try {
-      const resUsers = await fetch("http://localhost:3001/users");
-      const allUsers: User[] = await resUsers.json();
+      const allUsers: User[] = await UserService.getAll();
 
-      const nextIdNumeric = allUsers.length > 0
-        ? Math.max(...allUsers.map((u) => {
-          const parsed = parseInt(u.id.toString());
-          return isNaN(parsed) ? 0 : parsed;
-        })) + 1
+      const nextId = allUsers.length > 0
+        ? Math.max(...allUsers.map(u => u.id)) + 1
         : 1;
 
-      const nextId = String(nextIdNumeric);
-
-      const userData = {
+      const newUser: User = {
         id: nextId,
         name: name.trim(),
         email: email.trim().toLowerCase(),
-        password: password
+        password,
+        role: "user"
       };
 
-      const response = await fetch("http://localhost:3001/users", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(userData),
-      });
+      await UserService.create(newUser);
 
-      if (response.ok) {
-        const newUser: User = await response.json();
+      login(newUser);
 
-        login(newUser);
-
-        alert(`¡Bienvenid@ ${newUser.name}!`);
-        navigate("/");
-      } else {
-        alert("Error al guardar en el servidor.");
-      }
+      alert(`¡Bienvenid@ ${newUser.name}!`);
+      navigate("/");
     } catch (error) {
-      console.error("Error detallado:", error);
-      alert("Error de conexión.");
+      console.error("Error registrando usuario:", error);
+      alert("Ocurrió un error al registrar. Inténtalo de nuevo.");
     }
   };
-
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-cyan-50">
       <div className="p-10 bg-white rounded-xl shadow-lg w-96">
-        <h1 className="text-2xl font-bold mb-6 text-cyan-700 text-center">Registrarse</h1>
+        <h1 className="text-2xl font-bold mb-6 text-cyan-700 text-center">
+          Registrarse
+        </h1>
 
         <input
           type="text"

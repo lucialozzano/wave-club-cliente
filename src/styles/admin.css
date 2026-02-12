@@ -1,0 +1,127 @@
+:root {
+    --main-color: #3af8f5;
+    --main-color-dark: #2de0dd;
+}
+
+.admin-card {
+    transition: all 0.3s ease;
+    border-left: 4px solid transparent;
+}
+
+.admin-card:hover {
+    border-left-color: var(--main-color);
+    transform: translateX(5px);
+    background-color: #f0ffff;
+}
+
+.logo-container {
+    animation: pulse-logo 3s infinite ease-in-out;
+}
+
+@keyframes pulse-logo {
+
+    0%,
+    100% {
+        opacity: 0.8;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+}
+
+.admin-container {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.modal-overlay {
+    background: rgba(15, 23, 42, 0.7);
+    backdrop-filter: blur(8px);
+}
+
+.modal-content {
+    box-shadow: 0 25px 50px -12px rgba(58, 248, 245, 0.25);
+    animation: modalShow 0.3s ease-out;
+}
+
+@keyframes modalShow {
+    from {
+        opacity: 0;
+        transform: scale(0.9) translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.modal-overlay {
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(4px);
+    padding-top: 80px;
+}
+
+.modal-content {
+    box-shadow: 0 20px 40px -10px rgba(58, 248, 245, 0.3);
+    background: linear-gradient(to bottom right, #ffffff, #f0ffff);
+    border: 1px solid rgba(58, 248, 245, 0.2);
+}
+
+.input-style {
+    background: #f8fafc;
+    border: 2px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.input-style:focus {
+    border-color: #3af8f5;
+    background: white;
+    box-shadow: 0 0 10px rgba(58, 248, 245, 0.1);
+}
+
+.btn-base {
+    background-color: #ffffff;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-cancel {
+    border: 2px solid #fecaca;
+    color: #ef4444;
+}
+
+.btn-cancel:hover {
+    background-color: #ef4444;
+    color: #ffffff;
+    border-color: #ef4444;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(239, 68, 68, 0.2);
+}
+
+.btn-confirm {
+    background-color: #ffffff;
+    border: 2px solid #aaeeed;
+    color: #05bfbc;
+}
+
+.btn-confirm:hover {
+    background-color: var(--main-color);
+    color: #ffffff;
+    border-color: var(--main-color);
+    filter: brightness(1);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(58, 248, 245, 0.3);
+}
+
+.btn-cancel:active,
+.btn-confirm:active {
+    transform: translateY(1px);
+    box-shadow: none;
+}

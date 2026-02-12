@@ -14,9 +14,7 @@ const Header: React.FC = () => {
           />
         </div>
 
-        <div className="flex justify-center md:justify-end items-center w-full md:w-1/2 mt-4 md:mt-0">
-          <button className="button-alquilar">RESERVAR</button>
-        </div>
+
 
       </div>
     </header>

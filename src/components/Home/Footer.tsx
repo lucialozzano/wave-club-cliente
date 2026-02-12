@@ -53,14 +53,13 @@ const Footer: React.FC = () => {
             </tbody>
           </table>
         </div>
-
       </div>
 
       <p className="text-center mt-12 text-gray-400 text-sm">
         © 2026 Wave Club | All Rights Reserved
       </p>
     </footer>
-  );
-};
+  )
+}
 
 export default Footer;

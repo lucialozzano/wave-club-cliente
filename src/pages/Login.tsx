@@ -1,9 +1,8 @@
 import { useState } from "react";
 import { useUser } from "../context/UserContext";
 import { useNavigate, useLocation, Link } from "react-router-dom";
-import users from "../../api/db.json";
+import { UserService } from "../api/userService";
 import type { Activity } from "../types/Activity";
-import type { User } from "../types/User";
 
 const Login = () => {
   const { login } = useUser();
@@ -13,30 +12,33 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleLogin = () => {
-    const user = (users.users as unknown as User[]).find(
-      (u) => u.email === email && u.password === password
-    );
+  const handleLogin = async () => {
+    try {
+      const users = await UserService.getAll(); 
+      const user = users.find(u => u.email === email && u.password && u.password === password);
 
-    if (!user) {
-      alert("Email o contraseña incorrectos");
-      return;
-    }
+      if (!user) {
+        alert("Email o contraseña incorrectos");
+        return;
+      }
 
-    login(user); 
+      login(user); 
 
-    const state = location.state as { reserveThis?: Activity } | undefined;
+      const state = location.state as { reserveThis?: Activity } | undefined;
 
-    if (state?.reserveThis) {
-      navigate(`/activities/${state.reserveThis.name.toLowerCase()}`, {
-        replace: true,
-        state: { reserveThis: state.reserveThis }
-      });
-    } else {
-      navigate("/", { replace: true });
+      if (state?.reserveThis) {
+        navigate(`/activities/${state.reserveThis.name.toLowerCase()}`, {
+          replace: true,
+          state: { reserveThis: state.reserveThis }
+        });
+      } else {
+        navigate("/", { replace: true });
+      }
+    } catch (error) {
+      console.error(error);
+      alert("Error al iniciar sesión. Intenta de nuevo.");
     }
   };
-
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-cyan-50">

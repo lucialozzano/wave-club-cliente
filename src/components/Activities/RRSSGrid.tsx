@@ -2,7 +2,6 @@ const RRSSGrid = () => {
   return (
     <div className="mt-20 w-full flex flex-wrap">
 
-
       <div className="relative group flex-1 min-w-[80px]">
         <img
           src="/src/assets/images/81886003_481693189398009_4745791933860630342_n.jpg"

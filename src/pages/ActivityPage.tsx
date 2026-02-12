@@ -1,7 +1,7 @@
 import "../styles/activities.css";
 
 import Header from "../components/Activities/Header";
-import ActivityGrid from "../components/ActivityPage/ActivityGrid"; // tu grid de clases
+import ActivityGrid from "../components/ActivityPage/ActivityGrid"; 
 import Levels from "../components/Activities/Levels";
 import Teachers from "../components/Activities/Teachers";
 import Footer from "../components/Home/Footer";
